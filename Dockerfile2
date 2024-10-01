@@ -1,0 +1,9 @@
+FROM httpd:latest
+ARG Environment=Dev
+ADD dockerfile1 .
+WORKDIR /usr/local/apache2/htdocs
+COPY index.html /usr/local/apache2/htdocs
+EXPOSE 80
+ENV Name=Siddhesh
+CMD [ "httpd-foreground" ]
+ENTRYPOINT [ "httpd-foreground" ]

@@ -1,0 +1,10 @@
+#create a docker file for httpd server
+FROM centos:7
+ARG Name=Siddhesh
+USER root
+RUN yum install -y httpd
+RUN systemctl start httpd
+RUN systemctl status httpd
+EXPOSE 80
+CMD [ "executable" ]
+ENTRYPOINT [ "executable" ]
